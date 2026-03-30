@@ -12,7 +12,9 @@ import 'package:signup_app/main.dart';
 void main() {
   testWidgets('Shows the welcome screen', (WidgetTester tester) async {
     await tester.pumpWidget(const SignupAdventureApp());
+    await tester.pumpAndSettle();
 
-    expect(find.text('Welcome Screen'), findsOneWidget);
+    expect(find.text('Cash Money App'), findsOneWidget);
+    expect(find.text('Start'), findsOneWidget);
   });
 }
