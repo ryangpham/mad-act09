@@ -111,7 +111,9 @@ class _SignupScreenState extends State<SignupScreen> {
                   if (_formKey.currentState!.validate()) {
                     Navigator.of(context).pushReplacement(
                       MaterialPageRoute(
-                        builder: (context) => const SuccessScreen(),
+                        builder: (context) => SuccessScreen(
+                          username: _nameController.text.trim(),
+                        ),
                       ),
                     );
                   }
